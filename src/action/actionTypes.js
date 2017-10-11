@@ -1,1 +1,5 @@
-actionTypes.js
+const ACTIONTYPE={
+	AUTH:"AUTH"
+}
+
+export default ACTIONTYPE
