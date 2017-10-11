@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {render} from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+import 'bootstrap/dist/css/bootstrap.css'
+import './css/main.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render("Balaji", document.getElementById('sri'));
 registerServiceWorker();
