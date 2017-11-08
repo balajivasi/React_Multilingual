@@ -1,7 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux'
+import {bindActionCreators} from 'redux'
+import * as actionCreators from '../../action/actionCreator'
 
-export default class Header extends React.Component{
+class Header extends React.Component{
 	render(){
 			console.log('props',this.props)
 		return <nav className="navbar navbar-inverse">
@@ -18,8 +21,20 @@ export default class Header extends React.Component{
 					<ul className="nav navbar-nav">
 						<li><NavLink exact to="/"  activeClassName="active">Home</NavLink></li>
 						<li><NavLink to="/aboutUs" activeClassName="active">About Us</NavLink></li>
+						<li><NavLink to="/aboutUs/wizard" activeClassName="active">wizard</NavLink></li>
 					</ul>
 				</div>
 			</nav>
 	}
 }
+
+function mapStateToProps(state){
+	console.log('map--',state)
+	return {GlobalData:state.GlobalData}
+}
+
+function mapDispatchToProps(dispatch){
+	return bindActionCreators(actionCreators, dispatch);
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header)

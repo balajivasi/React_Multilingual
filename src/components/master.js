@@ -9,6 +9,7 @@ export default class MasterPage extends React.Component{
 		return <Switch>
 			<Route exact path="/" component={ HomePage } />
 			<Route path="/aboutUs" component={ AboutUs } />
+			
 		</Switch>
 	}
 }
