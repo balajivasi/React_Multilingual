@@ -6,10 +6,9 @@ import AboutUs from './AboutUs'
 
 export default class MasterPage extends React.Component{
 	render(){
-		return <Switch>
-			<Route exact path="/" component={ HomePage } />
-			<Route path="/aboutUs" component={ AboutUs } />
-			
-		</Switch>
+		return  <Switch>
+					<Route exact path="/" component={ HomePage } />
+					<Route path="/aboutUs" component={ AboutUs } />
+				</Switch>
 	}
 }
